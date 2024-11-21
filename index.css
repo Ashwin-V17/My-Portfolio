@@ -10,9 +10,12 @@
 }
 :root {
   --bg-color: #1f242d;
+  /* --bg-color: #0047cc; */
+  /* --bg-color: #000; */
   --s-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
+  /* --main-color: limegreen; */
 }
 html {
   font-size: 62.5%;
@@ -62,22 +65,36 @@ section {
   min-height: 100vh;
   padding: 10rem 9% 2rem;
 }
-.home-image img {
-  /* object-fit: contain; */
+/* .home-image {
+  overflow: hidden;
+  width: 36vw;
+  height: 88vh;
+  box-shadow: 0 0 1rem #02e1ba;
+  position: relative;
   height: 80vh;
-  width: 35vw;
+  width: 32vw;
+  object-fit: cover;
+  transform: scale(1.4);
+} */
+
+.home-image img {
+  height: 80vh;
+  width: 32vw;
+  object-fit: cover;
+  /* aspect-ratio: 16/9;s */
   animation: floatImage 4s ease-in-out infinite;
+  /* transition: transform 0.2s ease; */
 }
 
 @keyframes floatImage {
   0% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1.4);
   }
   50% {
-    transform: translateY(-2.4rem);
+    transform: translateY(-3rem) scale(1.4);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1.4);
   }
 }
 
@@ -140,7 +157,9 @@ span {
 }
 .about-img img {
   height: 80vh;
-  width: 35vw;
+  width: 32vw;
+  object-fit: cover;
+  transform: scale(1.4);
 }
 .about {
   display: flex;
@@ -206,7 +225,7 @@ span {
 }
 .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2.5rem;
 }
