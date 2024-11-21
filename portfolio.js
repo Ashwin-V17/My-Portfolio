@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // ! toggle icon navbar
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
@@ -66,7 +65,7 @@ const typed = new Typed(".multiple-text", {
   backDelay: 1000,
   loop: true,
 });
-=======
+
 // ! toggle icon navbar
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
@@ -134,4 +133,3 @@ const typed = new Typed(".multiple-text", {
   backDelay: 1000,
   loop: true,
 });
->>>>>>> origin/main
