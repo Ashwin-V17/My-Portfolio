@@ -24,7 +24,9 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -412,6 +414,9 @@ span {
   }
   .home-content h1 {
     font-size: 5rem;
+  }
+  .home-content {
+    z-index: 1;
   }
   .home-image {
     width: 100%;
