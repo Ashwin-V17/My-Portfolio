@@ -37,7 +37,7 @@ const About = () => {
         </div>
 
         <img 
-          src="/assets/Ashwin__1_-ai-brush-removebg-1jov1bs.png" 
+          src={`${import.meta.env.BASE_URL}assets/images/Ashwin__1_-ai-brush-removebg-1jov1bs.png`} 
           alt="Ashwin" 
           className="relative z-10 h-auto w-full max-w-[400px] object-contain max-md:max-w-[300px] filter drop-shadow-[0_0_2rem_rgba(14,239,255,0.3)] group-hover:drop-shadow-[0_0_3rem_rgba(14,239,255,0.5)] group-hover:scale-105 transition-all duration-700"
         />
@@ -142,7 +142,7 @@ const About = () => {
           </button>
 
           <a 
-            href="/assets/Ashwin's__Resume.pdf"
+            href={`${import.meta.env.BASE_URL}assets/Ashwin_Resume.pdf`}
             download="Ashwin-Resume"
             className="group relative inline-block bg-transparent border-2 border-accent rounded-[4rem] px-11 py-4 tracking-wider text-[1.6rem] text-accent font-semibold transition-all duration-500 hover:bg-accent hover:text-bg-secondary hover:shadow-[0_0_2rem_#0ef] hover:scale-105 overflow-hidden animate-fadeInUp animation-delay-800 max-md:text-[1.4rem] max-md:px-8 max-md:py-3"
           >

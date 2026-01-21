@@ -112,8 +112,8 @@ const Home = () => {
             <i className="fa-brands fa-github relative z-10 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
           </a>
         </div>
-        
-        <a href="/assets/Ashwin's__Resume.pdf" className="group relative inline-block bg-gradient-to-r from-accent to-blue-500 rounded-[4rem] px-11 py-4 tracking-wider text-[1.6rem] text-white font-semibold transition-all duration-500 hover:shadow-[0_0_2rem_#0ef,0_0_4rem_#0ef] hover:scale-105 mt-12 animate-fadeInUp animation-delay-1000 overflow-hidden" download="Ashwin-Resume">
+         
+        <a href={`${import.meta.env.BASE_URL}assets/Ashwin_Resume.pdf`} className="group relative inline-block bg-gradient-to-r from-accent to-blue-500 rounded-[4rem] px-11 py-4 tracking-wider text-[1.6rem] text-white font-semibold transition-all duration-500 hover:shadow-[0_0_2rem_#0ef,0_0_4rem_#0ef] hover:scale-105 mt-12 animate-fadeInUp animation-delay-1000 overflow-hidden" download="Ashwin-Resume">
           <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
           <span className="relative z-10 flex items-center gap-2">
             <i className="fa-solid fa-download"></i>
@@ -130,7 +130,7 @@ const Home = () => {
         </div>
         
         <div className="relative group">
-          <img src="/assets/Ashwin__1_-ai-brush-removebg-1jov1bs.png" alt="Ashwin" className="h-[80vh] w-auto max-w-[32vw] object-contain animate-float max-md:max-w-full filter drop-shadow-[0_0_3rem_rgba(14,239,255,0.4)] relative z-10 transition-all duration-500 group-hover:drop-shadow-[0_0_4rem_rgba(14,239,255,0.6)] group-hover:scale-105" />
+          <img src={`${import.meta.env.BASE_URL}assets/images/Ashwin__1_-ai-brush-removebg-1jov1bs.png`}   alt="Ashwin" className="h-[80vh] w-auto max-w-[32vw] object-contain animate-float max-md:max-w-full filter drop-shadow-[0_0_3rem_rgba(14,239,255,0.4)] relative z-10 transition-all duration-500 group-hover:drop-shadow-[0_0_4rem_rgba(14,239,255,0.6)] group-hover:scale-105" />
           
           {/* Decorative elements around image */}
           <div className="absolute top-10 -right-10 w-20 h-20 border-4 border-accent/50 rounded-full animate-spin-slow"></div>
