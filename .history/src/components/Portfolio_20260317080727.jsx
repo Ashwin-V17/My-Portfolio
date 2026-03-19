@@ -75,7 +75,8 @@ const Portfolio = () => {
       isDualPlatform: true,
     },
     {
-      image: "https://amogamart.com/assets/images/home/amogamart.webp",
+      image:
+        "https://amogamart.com/assets/images/home/amogamart.webp",
       title: "Amogamart",
       category: "mobile",
       description:

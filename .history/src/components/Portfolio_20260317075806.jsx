@@ -75,7 +75,8 @@ const Portfolio = () => {
       isDualPlatform: true,
     },
     {
-      image: "https://amogamart.com/assets/images/home/amogamart.webp",
+      image:
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b9/a2/39/b9a239fb-49ee-f0ab-8e4a-b65136b3673e/Placeholder.mill/400x400bb-75.webp",
       title: "Amogamart",
       category: "mobile",
       description:
@@ -93,7 +94,8 @@ const Portfolio = () => {
       github: null,
       featured: true,
       type: "E-commerce Platform",
-      isDualPlatform: false,
+      isDualPlatform: true,
+
     },
     {
       image: "https://agsk.in/asset/images/AGSKKK.png",

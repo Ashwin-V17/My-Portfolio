@@ -21,7 +21,7 @@ const About = () => {
 
   return (
     <section
-      className="relative min-h-screen pt-[10rem] pr-[1%] pb-8 pl-[2%] flex justify-center items-center gap-48 bg-bg-secondary max-md:flex-col-reverse max-md:pt-[10rem] max-md:px-[3%] max-md:gap-8 overflow-hidden"
+      className="relative min-h-screenpt-[10rem] pr-[1%] pb-8 pl-[2%] flex justify-center items-center gap-48 bg-bg-secondary max-md:flex-col-reverse max-md:pt-[10rem] max-md:px-[3%] max-md:gap-8 overflow-hidden"
       id="about"
     >
       {/* Animated Background */}

@@ -23,14 +23,14 @@ const Portfolio = () => {
         {
           type: "customer",
           playStore:
-            "https://play.google.com/store/apps/details?id=com.construvtions.veeconstructions",
+            "https://play.google.com/store/apps/details?id=com.construvtions.veeconstructions", // Customer app
           appStore: "https://apps.apple.com/in/app/vee-builds/id6754379231",
           label: "Customer App",
         },
         {
           type: "vendor",
           playStore:
-            "https://play.google.com/store/apps/details?id=com.construvtions.veeconstructions.vendor",
+            "https://play.google.com/store/apps/details?id=com.construvtions.veeconstructions.vendor", // Vendor app
           appStore:
             "https://apps.apple.com/in/app/veebuild-business/id6753942254",
           label: "Vendor App",
@@ -58,14 +58,14 @@ const Portfolio = () => {
         {
           type: "customer",
           playStore:
-            "https://play.google.com/store/apps/details?id=com.app.meduora",
+            "https://play.google.com/store/apps/details?id=com.app.meduora", // Customer app
           appStore: "https://apps.apple.com/in/app/meduora/id6753971605",
           label: "Customer App",
         },
         {
           type: "vendor",
           playStore:
-            "https://play.google.com/store/apps/details?id=com.app.meduorahealthhcare",
+            "https://play.google.com/store/apps/details?id=com.app.meduorahealthhcare", // Vendor app
           appStore: "https://apps.apple.com/in/app/meduora-vendor/id6753979887",
           label: "Vendor App",
         },
@@ -75,25 +75,17 @@ const Portfolio = () => {
       isDualPlatform: true,
     },
     {
-      image: "https://amogamart.com/assets/images/home/amogamart.webp",
-      title: "Amogamart",
+      image: "https://accsysindia.in/live_old/assets/images/alog.png",
+      title: "Accsys India",
       category: "mobile",
       description:
-        "E-commerce platform which provides a seamless shopping experience for customers. The app features secure payment integration, real-time order tracking, and a user-friendly interface.",
-      technologies: [
-        "React Native",
-        "Expo",
-        "Laravel",
-        "MySQL",
-        "JWT",
-        "Firebase",
-      ],
-      link: "https://play.google.com/store/apps/details?id=com.app.amogamart",
-      appStore: "https://apps.apple.com/in/app/amogamart/id6759096148",
+        "E-commerce platform with integrated network marketing features enabling product sales and distributor management. Successfully integrated payment gateway and multi-level marketing features.",
+      technologies: ["Java", "Android", "PHP", "MySQL", "Razorpay"],
+      link: "https://play.google.com/store/apps/details?id=accsysindia.india.com",
+
       github: null,
       featured: true,
-      type: "E-commerce Platform",
-      isDualPlatform: false,
+      type: "E-commerce & MLM",
     },
     {
       image: "https://agsk.in/asset/images/AGSKKK.png",
@@ -122,7 +114,7 @@ const Portfolio = () => {
       type: "Education",
     },
     {
-      image: `${import.meta.env.BASE_URL}assets/images/Screenshot 2024-09-23 141554.png`,
+      image:  `${import.meta.env.BASE_URL}assets/images/Screenshot 2024-09-23 141554.png`,
       title: "Student Management System",
       category: "web",
       description:
@@ -133,6 +125,19 @@ const Portfolio = () => {
       featured: true,
       type: "Management System",
     },
+    {
+      image: `${import.meta.env.BASE_URL}assets/images/snow_dawn/Screenshot 2024-03-16 101307.png`,
+      title: "E-Commerce Dashboard",
+      category: "web",
+      description:
+        "Admin dashboard for managing products, orders, and analytics with real-time data visualization and comprehensive reporting features.",
+      technologies: ["React.js", "Laravel", "MySQL", "Chart.js"],
+      link: "#",
+      github: "#",
+      featured: false,
+      type: "Dashboard",
+    },
+    
   ];
 
   const filters = [
@@ -245,12 +250,12 @@ const Portfolio = () => {
         ))}
       </div>
 
-      {/* Projects Grid — removed "items-start" so all cards stretch to equal row height */}
-      <div className="grid grid-cols-2 gap-8 relative z-10 max-lg:grid-cols-2 max-md:grid-cols-1">
+      {/* Projects Grid */}
+      <div className="grid grid-cols-2 items-start gap-8 relative z-10 max-lg:grid-cols-2 max-md:grid-cols-1">
         {filteredProjects.map((project, index) => (
           <div
             key={index}
-            className="group relative rounded-[2rem] overflow-hidden bg-bg-primary border-2 border-bg-primary hover:border-accent transition-all duration-500 hover:shadow-[0_0_3rem_rgba(14,239,255,0.2)] hover:scale-[1.02] animate-fadeInUp flex flex-col"
+            className="group relative rounded-[2rem] overflow-hidden bg-bg-primary border-2 border-bg-primary hover:border-accent transition-all duration-500 hover:shadow-[0_0_3rem_rgba(14,239,255,0.2)] hover:scale-[1.02] animate-fadeInUp"
             style={{ animationDelay: `${0.6 + index * 0.1}s` }}
           >
             {/* Featured Badge */}
@@ -266,8 +271,8 @@ const Portfolio = () => {
               {project.type}
             </div>
 
-            {/* Image — fixed height, won't grow */}
-            <div className="relative overflow-hidden h-[300px] max-md:h-[250px] flex-shrink-0">
+            {/* Image */}
+            <div className="relative overflow-hidden h-[300px] max-md:h-[250px]">
               <img
                 src={project.image}
                 alt={project.title}
@@ -276,7 +281,6 @@ const Portfolio = () => {
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-transparent to-transparent opacity-60"></div>
             </div>
-
             {/* Dual Platform Badge */}
             {project.isDualPlatform && (
               <div className="absolute top-20 right-4 z-20 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-[1.2rem] font-semibold flex items-center gap-2 shadow-lg">
@@ -284,9 +288,8 @@ const Portfolio = () => {
                 Dual Platform
               </div>
             )}
-
-            {/* Content — flex-col + flex-1 so it fills remaining card height */}
-            <div className="p-8 max-md:p-6 flex flex-col flex-1">
+            {/* Content */}
+            <div className="p-8 max-md:p-6">
               <h3 className="text-[2.4rem] font-bold mb-3 group-hover:text-accent transition-colors duration-300 max-md:text-[2rem]">
                 {project.title}
               </h3>
@@ -307,8 +310,8 @@ const Portfolio = () => {
                 ))}
               </div>
 
-              {/* Action Buttons — mt-auto pushes this block to the bottom */}
-              <div className="flex flex-col gap-3 mt-auto">
+              {/* Action Buttons */}
+              <div className="flex flex-col gap-3">
                 {project.isDualPlatform ? (
                   // Dual Platform (Customer + Vendor Apps)
                   project.links.map((link, linkIndex) => (

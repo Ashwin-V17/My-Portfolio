@@ -56,7 +56,7 @@ const Contact = () => {
     {
       icon: 'fa-phone',
       title: 'Phone',
-      value: '+91 9003272385', // Replace with your actual phone
+      value: '+91 XXXXX XXXXX', // Replace with your actual phone
       link: 'tel:+919003272385',
       color: 'from-blue-500 to-purple-500'
     },

@@ -50,14 +50,14 @@ const Contact = () => {
       icon: 'fa-envelope',
       title: 'Email',
       value: 'ashwinv0017@gmail.com', // Replace with your actual email
-      link: 'mailto:ashwinv0017@gmail.com',
+      link: 'mailto:ashwin.dev@example.com',
       color: 'from-accent to-blue-500'
     },
     {
       icon: 'fa-phone',
       title: 'Phone',
-      value: '+91 9003272385', // Replace with your actual phone
-      link: 'tel:+919003272385',
+      value: '+91 XXXXX XXXXX', // Replace with your actual phone
+      link: 'tel:+91XXXXXXXXXX',
       color: 'from-blue-500 to-purple-500'
     },
     {

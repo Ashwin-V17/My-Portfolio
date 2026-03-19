@@ -75,31 +75,23 @@ const Portfolio = () => {
       isDualPlatform: true,
     },
     {
-      image: "https://amogamart.com/assets/images/home/amogamart.webp",
-      title: "Amogamart",
+      image: "https://accsysindia.in/live_old/assets/images/alog.png",
+      title: "Accsys India",
       category: "mobile",
       description:
-        "E-commerce platform which provides a seamless shopping experience for customers. The app features secure payment integration, real-time order tracking, and a user-friendly interface.",
-      technologies: [
-        "React Native",
-        "Expo",
-        "Laravel",
-        "MySQL",
-        "JWT",
-        "Firebase",
-      ],
-      link: "https://play.google.com/store/apps/details?id=com.app.amogamart",
-      appStore: "https://apps.apple.com/in/app/amogamart/id6759096148",
+        "E-commerce platform with integrated network marketing features enabling product sales and distributor management. Successfully integrated payment gateway and multi-level marketing features.",
+      technologies: ["Java", "Android", "PHP", "MySQL", "Razorpay"],
+      link: "https://play.google.com/store/apps/details?id=accsysindia.india.com",
       github: null,
       featured: true,
-      type: "E-commerce Platform",
-      isDualPlatform: false,
+      type: "E-commerce & MLM",
     },
     {
       image: "https://agsk.in/asset/images/AGSKKK.png",
       title: "AGSK - Banana Leaf Marketplace",
       category: "mobile",
       description:
+      
         "Innovative banana leaf selling app with three distinct user roles: customers, hotels, and catering services. Seamless ordering experience with integrated payment processing.",
       technologies: ["React Native", "Expo", "CodeIgniter 4", "Razorpay"],
       link: "https://play.google.com/store/apps/details?id=com.app.Agsk&hl=en_IN",
