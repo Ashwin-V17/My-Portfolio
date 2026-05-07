@@ -61,7 +61,7 @@ const Services = () => {
         {services.map((service, index) => (
           <div 
             key={index}
-            className="group flex-1 basis-[30rem] max-w-[400px] bg-bg-secondary px-8 pt-12 pb-8 rounded-[2rem] border-2 border-bg-primary transition-all duration-500 hover:border-accent hover:scale-105 hover:shadow-[0_0_3rem_rgba(14,239,255,0.2)] relative overflow-hidden animate-fadeInUp"
+            className="group flex-1 basis-[30rem] max-w-[400px] bg-bg-secondary px-8 pt-12 pb-8 rounded-[2rem] border-2 border-bg-primary transition-all duration-500 hover:border-accent hover:scale-105 hover:shadow-[0_0_3rem_rgba(14,239,255,0.2)] relative overflow-hidden animate-fadeInUp flex flex-col"
             style={{ animationDelay: `${0.4 + index * 0.2}s` }}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -111,16 +111,18 @@ const Services = () => {
             </div>
 
             {/* CTA Button */}
-            <a 
-              href="#contact" 
-              className="group/btn relative inline-block bg-gradient-to-r from-accent to-blue-500 rounded-[4rem] px-11 py-4 tracking-wider text-[1.6rem] text-white font-semibold transition-all duration-500 hover:shadow-[0_0_2rem_#0ef,0_0_4rem_#0ef] hover:scale-105 overflow-hidden max-md:text-[1.4rem] max-md:px-8 max-md:py-3"
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-accent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500"></span>
-              <span className="relative z-10 flex items-center gap-2 justify-center">
-                Get Started
-                <i className="fa-solid fa-arrow-right group-hover/btn:translate-x-2 transition-transform duration-300"></i>
-              </span>
-            </a>
+            <div className="mt-auto pt-6 flex justify-center">
+              <a 
+                href="#contact" 
+                className="group/btn relative inline-block bg-gradient-to-r from-accent to-blue-500 rounded-[4rem] px-11 py-4 tracking-wider text-[1.6rem] text-white font-semibold transition-all duration-500 hover:shadow-[0_0_2rem_#0ef,0_0_4rem_#0ef] hover:scale-105 overflow-hidden max-md:text-[1.4rem] max-md:px-8 max-md:py-3 w-max"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-accent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500"></span>
+                <span className="relative z-10 flex items-center gap-2 justify-center">
+                  Get Started
+                  <i className="fa-solid fa-arrow-right group-hover/btn:translate-x-2 transition-transform duration-300"></i>
+                </span>
+              </a>
+            </div>
 
             {/* Decorative Corner */}
             <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden opacity-20 group-hover:opacity-40 transition-opacity duration-500">

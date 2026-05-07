@@ -137,5 +137,5 @@ Copyright © 2024 by Ashwin | All Rights Reserved.
 ## 👤 Author
 
 **Ashwin**
-- LinkedIn: [ashwin-v-455b75245](https://www.linkedin.com/in/ashwin-v-455b75245)
+- LinkedIn: [ashwin-v-455b75245](https://www.linkedin.com/in/ashwin-vilson-455b75245/)
 - GitHub: [Ashwin-V17](https://github.com/Ashwin-V17)

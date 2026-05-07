@@ -7,6 +7,7 @@ import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { ThemeProvider } from './context/ThemeContext';
 import './index.css';
 
 function App() {
@@ -31,15 +32,17 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-bg-primary text-text-primary">
-      <Header />
-      <Home />
-      <About />
-      <Services />
-      <Portfolio />
-      <Contact />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="bg-bg-primary text-text-primary transition-colors duration-400">
+        <Header />
+        <Home />
+        <About />
+        <Services />
+        <Portfolio />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

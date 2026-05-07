@@ -70,10 +70,10 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: 'fa-linkedin', url: 'https://www.linkedin.com/in/ashwin-v-455b75245', label: 'LinkedIn', color: 'hover:text-blue-500' },
+    { icon: 'fa-linkedin', url: 'https://www.linkedin.com/in/ashwin-vilson-455b75245/', label: 'LinkedIn', color: 'hover:text-blue-500' },
     { icon: 'fa-github', url: 'https://github.com/Ashwin-V17', label: 'GitHub', color: 'hover:text-gray-400' },
     { icon: 'fa-facebook', url: 'https://www.facebook.com/ashwin.V.17', label: 'Facebook', color: 'hover:text-blue-600' },
-    { icon: 'fa-instagram', url: '#', label: 'Instagram', color: 'hover:text-pink-500' }
+    { icon: 'fa-instagram', url: 'https://www.instagram.com/ashwin____17/', label: 'Instagram', color: 'hover:text-pink-500' }
   ];
 
   return (
@@ -168,7 +168,7 @@ const Contact = () => {
 
         {/* Contact Form - Right Side */}
         <div className="lg:col-span-3 animate-fadeInRight">
-          <form 
+          <form
             onSubmit={handleSubmit}
             className="bg-bg-secondary border-2 border-bg-primary hover:border-accent/30 rounded-2xl p-8 max-md:p-6 transition-all duration-500"
           >
@@ -178,12 +178,12 @@ const Contact = () => {
                   <i className="fa-solid fa-user mr-2"></i>
                   Full Name *
                 </label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Monkey D. Luffy" 
+                  placeholder="Monkey D. Luffy"
                   required
                   className="w-full text-[1.6rem] px-6 py-4 text-text-primary bg-bg-primary border-2 border-transparent rounded-xl focus:border-accent focus:outline-none transition-all duration-300"
                 />
@@ -194,12 +194,12 @@ const Contact = () => {
                   <i className="fa-solid fa-envelope mr-2"></i>
                   Email Address *
                 </label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="strawhat@example.com" 
+                  placeholder="strawhat@example.com"
                   required
                   className="w-full text-[1.6rem] px-6 py-4 text-text-primary bg-bg-primary border-2 border-transparent rounded-xl focus:border-accent focus:outline-none transition-all duration-300"
                 />
@@ -212,12 +212,12 @@ const Contact = () => {
                   <i className="fa-solid fa-phone mr-2"></i>
                   Phone Number
                 </label>
-                <input 
-                  type="tel" 
+                <input
+                  type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="+91 XXXXX XXXXX" 
+                  placeholder="+91 XXXXX XXXXX"
                   className="w-full text-[1.6rem] px-6 py-4 text-text-primary bg-bg-primary border-2 border-transparent rounded-xl focus:border-accent focus:outline-none transition-all duration-300"
                 />
               </div>
@@ -227,12 +227,12 @@ const Contact = () => {
                   <i className="fa-solid fa-tag mr-2"></i>
                   Subject *
                 </label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Project Discussion" 
+                  placeholder="Project Discussion"
                   required
                   className="w-full text-[1.6rem] px-6 py-4 text-text-primary bg-bg-primary border-2 border-transparent rounded-xl focus:border-accent focus:outline-none transition-all duration-300"
                 />
@@ -256,7 +256,7 @@ const Contact = () => {
             </div>
 
             {/* Submit Button */}
-            <button 
+            <button
               type="submit"
               disabled={isSubmitting}
               className="group w-full bg-gradient-to-r from-accent to-blue-500 rounded-full px-11 py-5 tracking-wider text-[1.6rem] text-white font-semibold transition-all duration-500 hover:shadow-[0_0_2rem_#0ef,0_0_4rem_#0ef] hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden relative"
@@ -300,7 +300,7 @@ const Contact = () => {
         <p className="text-[1.6rem] text-gray-400 mb-4">
           Prefer to download my resume?
         </p>
-        <a 
+        <a
           href={`${import.meta.env.BASE_URL}assets/Ashwin-Resume.pdf`}
           download="Ashwin-Resume"
           className="group relative inline-block bg-transparent border-2 border-accent rounded-[4rem] px-11 py-4 tracking-wider text-[1.6rem] text-accent font-semibold transition-all duration-500 hover:bg-accent hover:text-bg-secondary hover:shadow-[0_0_2rem_#0ef] hover:scale-105 overflow-hidden max-md:text-[1.4rem] max-md:px-8 max-md:py-3"

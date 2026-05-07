@@ -8,134 +8,176 @@ const Home = () => {
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
       strings: ["Full Stack Developer", "Web Developer", "Mobile App Developer"],
-      typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 1000,
+      typeSpeed: 80,
+      backSpeed: 60,
+      backDelay: 1500,
       loop: true,
     });
-
-    return () => {
-      typed.destroy();
-    };
+    return () => typed.destroy();
   }, []);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+    const handleMouseMove = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+  const socials = [
+    { href: "https://www.facebook.com/ashwin.V.17", icon: "fa-facebook", title: "Facebook", hoverBorder: "hover:border-blue-500", hoverGrad: "from-blue-600 to-blue-400" },
+    { href: "https://www.instagram.com/ashwin____17/", icon: "fa-instagram", title: "Instagram", hoverBorder: "hover:border-pink-500", hoverGrad: "from-pink-500 via-purple-500 to-orange-400" },
+    { href: "https://www.linkedin.com/in/ashwin-vilson-455b75245/", icon: "fa-linkedin", title: "LinkedIn", hoverBorder: "hover:border-blue-600", hoverGrad: "from-blue-700 to-blue-400" },
+    { href: "https://github.com/Ashwin-V17", icon: "fa-github", title: "GitHub", hoverBorder: "hover:border-gray-400", hoverGrad: "from-gray-700 to-gray-500" },
+  ];
+
   return (
-    <section className="relative min-h-screen min-w-full pt-[10rem] pr-[9%] pb-8 pl-[9%] flex justify-between items-center gap-8 max-md:flex-col max-md:pt-[10rem] max-md:px-[3%] overflow-hidden" id="home">
-      {/* Animated Background Elements */}
+    <section
+      className="relative min-h-screen min-w-full flex justify-between items-center gap-8 max-md:flex-col overflow-hidden"
+      id="home"
+      style={{ paddingTop: '10rem', paddingBottom: '6rem', paddingLeft: '9%', paddingRight: '9%' }}
+    >
+      {/*  mesh gradient background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse animation-delay-500"></div>
+        <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full opacity-30"
+          style={{ background: 'radial-gradient(circle, rgba(var(--accent-rgb),0.2) 0%, transparent 70%)', transform: `translate(${mousePosition.x * 0.015}px, ${mousePosition.y * 0.015}px)`, transition: 'transform 0.8s ease-out' }} />
+        <div className="absolute bottom-[-10%] right-[-5%] w-[700px] h-[700px] rounded-full opacity-20"
+          style={{ background: 'radial-gradient(circle, rgba(59,130,246,0.25) 0%, transparent 70%)', transform: `translate(${-mousePosition.x * 0.01}px, ${-mousePosition.y * 0.01}px)`, transition: 'transform 0.8s ease-out' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-10"
+          style={{ background: 'radial-gradient(circle, rgba(168,85,247,0.3) 0%, transparent 70%)' }} />
+
+        {/* Floating particles */}
+        {[...Array(6)].map((_, i) => (
+          <div key={i}
+            className="absolute rounded-full animate-pulse"
+            style={{
+              width: `${4 + i * 2}px`, height: `${4 + i * 2}px`,
+              background: i % 2 === 0 ? 'var(--accent)' : 'rgba(59,130,246,0.6)',
+              top: `${15 + i * 12}%`, left: `${10 + i * 13}%`,
+              opacity: 0.3 + i * 0.05,
+              animationDelay: `${i * 0.4}s`,
+              transform: `translate(${mousePosition.x * (0.01 + i * 0.003)}px, ${mousePosition.y * (0.01 + i * 0.003)}px)`,
+              transition: 'transform 0.6s ease-out'
+            }} />
+        ))}
       </div>
 
-      {/* Parallax Mouse Effect */}
-      <div 
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
-          transition: 'transform 0.3s ease-out'
-        }}
-      >
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-accent rounded-full opacity-50"></div>
-        <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-blue-400 rounded-full opacity-40"></div>
-        <div className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-purple-400 rounded-full opacity-60"></div>
-        <div className="absolute top-2/3 right-1/4 w-3 h-3 bg-accent rounded-full opacity-30"></div>
-      </div>
-
+      {/* Left: Content */}
       <div className="home-content z-10 flex-1 animate-fadeInLeft">
-        {/* Greeting with animation */}
-        <div className="mb-4 animate-fadeInUp">
-          <span className="text-[2rem] text-accent font-semibold tracking-wider uppercase opacity-80">
+
+        {/* Eyebrow label */}
+        <div className="mb-6 animate-fadeInUp flex items-center gap-3">
+          <span className="inline-block w-8 h-[2px]" style={{ background: 'var(--accent)' }} />
+          <span className="text-[1.5rem] font-bold tracking-[0.25em] uppercase" style={{ color: 'var(--accent)' }}>
             Welcome to my portfolio
           </span>
         </div>
-        
-        <h1 className="text-[5.6rem] font-bold leading-[1.3] max-md:text-[5rem] animate-fadeInUp relative inline-block">
-          Hello, It&apos;s Me
-          <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-accent to-transparent animate-expandWidth"></span>
-        </h1>
-        
-        <h1 className="text-[5.6rem] font-bold leading-[1.3] max-md:text-[5rem] bg-gradient-to-r from-accent via-blue-500 to-purple-500 bg-clip-text text-transparent animate-fadeInUp animation-delay-200 relative">
-          Ashwin
-          <span className="absolute -top-4 -right-4 text-[3rem] animate-wave">👋</span>
-        </h1>
-        
-        <h3 className="text-[3.2rem] font-bold mb-8 max-md:text-[2.6rem] animate-fadeInUp animation-delay-400">
-          And I&apos;m a <span ref={typedElement} className="text-accent whitespace-nowrap relative">
-            <span className="absolute inset-0 blur-md bg-accent/30"></span>
-          </span>
-        </h3>
-        
-        <p className="text-[1.6rem] max-w-[600px] leading-relaxed animate-fadeInUp animation-delay-600 relative group">
-          <span className="absolute -left-4 top-0 text-accent text-[4rem] opacity-20 font-serif">"</span>
+
+        {/* Name block */}
+        <div className="mb-2 animate-fadeInUp">
+          <p className="text-[2.2rem] font-medium text-gray-400 max-md:text-[1.8rem]">Hello, It's Me</p>
+          <h1 className="text-[6.4rem] font-black leading-[1.05] max-md:text-[5rem] relative inline-block text-accent">
+            Ashwin
+            <span className="absolute -top-3 -right-8 text-[3rem] animate-wave">👋</span>
+            {/* Accent underline */}
+            <span className="absolute -bottom-1 left-0 h-1 w-full rounded-full" style={{ background: 'linear-gradient(90deg, var(--accent), transparent)' }} />
+          </h1>
+        </div>
+
+        {/* Typed role */}
+        <h2 className="text-[2.8rem] font-semibold mb-6 max-md:text-[2.4rem] animate-fadeInUp animation-delay-400"
+          style={{ color: 'var(--text-primary)' }}>
+          I'm a&nbsp;
+          <span ref={typedElement} className="font-bold" style={{ color: 'var(--accent)' }} />
+        </h2>
+
+        {/* Bio */}
+        <p className="text-[1.6rem] max-w-[540px] leading-[1.8] text-gray-400 animate-fadeInUp animation-delay-600 border-l-2 pl-4 mb-8"
+          style={{ borderColor: 'var(--accent)' }}>
           Enthusiastic and motivated Full Stack Developer with a strong
           foundation in Core Java fundamentals and MERN Stack development.
-          <span className="absolute -right-4 bottom-0 text-accent text-[4rem] opacity-20 font-serif">"</span>
         </p>
 
-        {/* Skills tags */}
-        <div className="flex flex-wrap gap-3 mt-8 animate-fadeInUp animation-delay-700">
-          {['React','React Native', 'Node.js', 'Java', 'MongoDB', 'Express'].map((skill, index) => (
-            <span 
-              key={skill}
-              className="px-4 py-2 bg-accent/10 border border-accent/30 rounded-full text-sm font-medium text-accent hover:bg-accent/20 hover:scale-110 transition-all duration-300 cursor-default"
-              style={{ animationDelay: `${0.7 + index * 0.1}s` }}
-            >
+        {/* Skill chips */}
+        <div className="flex flex-wrap gap-2 mb-10 animate-fadeInUp animation-delay-700">
+          {['React', 'React Native', 'Node.js', 'Java', 'MongoDB', 'Express'].map((skill) => (
+            <span key={skill}
+              className="px-4 py-[6px] rounded-full text-[1.3rem] font-semibold border hover:scale-105 transition-all duration-300 cursor-default"
+              style={{ borderColor: 'rgba(var(--accent-rgb),0.4)', color: 'var(--accent)', background: 'rgba(var(--accent-rgb),0.07)' }}>
               {skill}
             </span>
           ))}
         </div>
 
-        <div className="social-media flex gap-4 animate-fadeInUp animation-delay-800">
-          <a href="https://www.facebook.com/ashwin.V.17" title="Facebook" className="group relative inline-flex justify-center items-center w-16 h-16 bg-gradient-to-br from-accent/10 to-transparent border-2 border-accent rounded-full mt-12 text-[2rem] text-accent transition-all duration-500 hover:border-blue-500 hover:rotate-12 overflow-hidden">
-            <span className="absolute inset-0 bg-gradient-to-br from-accent to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-            <i className="fa-brands fa-facebook relative z-10 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
-          </a>
-          <a href="#" title="Instagram" className="group relative inline-flex justify-center items-center w-16 h-16 bg-gradient-to-br from-accent/10 to-transparent border-2 border-accent rounded-full mt-12 text-[2rem] text-accent transition-all duration-500 hover:border-pink-500 hover:rotate-12 overflow-hidden">
-            <span className="absolute inset-0 bg-gradient-to-br from-pink-500 via-purple-500 to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-            <i className="fa-brands fa-instagram relative z-10 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/ashwin-v-455b75245" title="LinkedIn" className="group relative inline-flex justify-center items-center w-16 h-16 bg-gradient-to-br from-accent/10 to-transparent border-2 border-accent rounded-full mt-12 text-[2rem] text-accent transition-all duration-500 hover:border-blue-600 hover:rotate-12 overflow-hidden">
-            <span className="absolute inset-0 bg-gradient-to-br from-blue-600 to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-            <i className="fa-brands fa-linkedin relative z-10 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
-          </a>
-          <a href="https://github.com/Ashwin-V17" title="GitHub" className="group relative inline-flex justify-center items-center w-16 h-16 bg-gradient-to-br from-accent/10 to-transparent border-2 border-accent rounded-full mt-12 text-[2rem] text-accent transition-all duration-500 hover:border-gray-400 hover:rotate-12 overflow-hidden">
-            <span className="absolute inset-0 bg-gradient-to-br from-gray-700 to-black opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-            <i className="fa-brands fa-github relative z-10 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
+        {/* CTA row: socials + button */}
+        <div className="flex items-center gap-6 flex-wrap animate-fadeInUp animation-delay-800">
+          {/* Social icons */}
+          <div className="flex gap-3">
+            {socials.map(({ href, icon, title, hoverBorder, hoverGrad }) => (
+              <a key={title} href={href} title={title}
+                className={`group relative inline-flex justify-center items-center w-14 h-14 border-2 border-accent rounded-full text-[1.8rem] text-accent transition-all duration-400 ${hoverBorder} hover:rotate-6 overflow-hidden`}
+                style={{ background: 'rgba(var(--accent-rgb),0.05)' }}>
+                <span className={`absolute inset-0 bg-gradient-to-br ${hoverGrad} opacity-0 group-hover:opacity-100 transition-opacity duration-400`} />
+                <i className={`fa-brands ${icon} relative z-10 group-hover:text-white group-hover:scale-110 transition-all duration-300`} />
+              </a>
+            ))}
+          </div>
+
+          {/* Divider */}
+          <div className="w-px h-10 bg-gray-700 hidden sm:block" />
+
+          {/* Download CV */}
+          <a href={`${import.meta.env.BASE_URL}assets/Ashwin-Resume.pdf`} download="Ashwin-Resume"
+            className="group relative inline-flex items-center gap-3 rounded-full px-8 py-[14px] text-[1.6rem] font-bold text-white overflow-hidden transition-all duration-400 hover:scale-105 hover:shadow-[0_0_2.5rem_rgba(var(--accent-rgb),0.5)]"
+            style={{ background: 'linear-gradient(135deg, var(--accent), #3b82f6)' }}>
+            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400"
+              style={{ background: 'linear-gradient(135deg, #3b82f6, var(--accent))' }} />
+            <i className="fa-solid fa-download relative z-10 group-hover:animate-bounce" />
+            <span className="relative z-10">Download CV</span>
+            <i className="fa-solid fa-arrow-right relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
           </a>
         </div>
-         
-        <a href={`${import.meta.env.BASE_URL}assets/Ashwin-Resume.pdf`} className="group relative inline-block bg-gradient-to-r from-accent to-blue-500 rounded-[4rem] px-11 py-4 tracking-wider text-[1.6rem] text-white font-semibold transition-all duration-500 hover:shadow-[0_0_2rem_#0ef,0_0_4rem_#0ef] hover:scale-105 mt-12 animate-fadeInUp animation-delay-1000 overflow-hidden" download="Ashwin-Resume">
-          <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-          <span className="relative z-10 flex items-center gap-2">
-            <i className="fa-solid fa-download"></i>
-            Download CV
-            <i className="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform duration-300"></i>
-          </span>
-        </a>
       </div>
-      
-      <div className="home-image flex-1 flex justify-end max-md:mt-16 max-md:justify-center animate-fadeInRight relative">
-        {/* Glowing ring around image */}
-        <div className="absolute inset-0 flex items-center justify-end max-md:justify-center">
-          <div className="w-[32vw] h-[80vh] max-md:w-full rounded-full bg-gradient-to-r from-accent/20 via-blue-500/20 to-purple-500/20 blur-3xl animate-pulse"></div>
-        </div>
-        
+
+      {/* Right: Image */}
+      <div className="home-image flex-1 flex justify-end max-md:mt-16 max-md:justify-center animate-fadeInRight relative z-10">
         <div className="relative group">
-          <img src={`${import.meta.env.BASE_URL}assets/images/Ashwin__1_-ai-brush-removebg-1jov1bs.png`}   alt="Ashwin" className="h-[80vh] w-auto max-w-[32vw] object-contain animate-float max-md:max-w-full filter drop-shadow-[0_0_3rem_rgba(14,239,255,0.4)] relative z-10 transition-all duration-500 group-hover:drop-shadow-[0_0_4rem_rgba(14,239,255,0.6)] group-hover:scale-105" />
-          
-          {/* Decorative elements around image */}
-          <div className="absolute top-10 -right-10 w-20 h-20 border-4 border-accent/50 rounded-full animate-spin-slow"></div>
-          <div className="absolute bottom-20 -left-10 w-16 h-16 border-4 border-blue-500/50 rotate-45 animate-pulse"></div>
+          {/* Outer orbit ring */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-[36vw] h-[36vw] max-md:w-[80vw] max-md:h-[80vw] rounded-full border border-dashed animate-spin-slow"
+              style={{ borderColor: 'rgba(var(--accent-rgb),0.2)' }} />
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-[28vw] h-[28vw] max-md:w-[65vw] max-md:h-[65vw] rounded-full animate-spin-reverse"
+              style={{ border: '2px solid rgba(var(--accent-rgb),0.12)' }} />
+          </div>
+
+          {/* Soft glow blob behind image */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="w-[30vw] h-[70vh] max-md:w-full rounded-full blur-3xl animate-pulse"
+              style={{ background: 'radial-gradient(ellipse, rgba(var(--accent-rgb),0.18) 0%, rgba(59,130,246,0.1) 60%, transparent 100%)' }} />
+          </div>
+
+          {/* Photo */}
+          <img
+            src={`${import.meta.env.BASE_URL}assets/images/Ashwin__1_-ai-brush-removebg-1jov1bs.png`}
+            alt="Ashwin"
+            className="relative z-10 h-[78vh] w-auto max-w-[34vw] object-contain animate-float max-md:max-w-full transition-all duration-500 group-hover:scale-105"
+            style={{ filter: 'drop-shadow(0 0 3rem rgba(var(--accent-rgb),0.35))' }}
+          />
+
+          {/* Accent corner decorations */}
+          <div className="absolute top-8 -right-8 w-16 h-16 rounded-full border-4 animate-spin-slow"
+            style={{ borderColor: 'rgba(var(--accent-rgb),0.5)' }} />
+          <div className="absolute bottom-24 -left-8 w-12 h-12 rotate-45 animate-pulse"
+            style={{ border: '3px solid rgba(59,130,246,0.5)' }} />
+          <div className="absolute top-1/2 -right-6 w-3 h-3 rounded-full animate-ping"
+            style={{ background: 'var(--accent)', opacity: 0.6 }} />
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce z-10 opacity-60">
+        <span className="text-[1.2rem] tracking-widest uppercase" style={{ color: 'var(--accent)' }}>Scroll</span>
+        <div className="w-[2px] h-8 rounded-full" style={{ background: 'linear-gradient(to bottom, var(--accent), transparent)' }} />
       </div>
     </section>
   );

@@ -207,7 +207,7 @@ const Portfolio = () => {
       </div>
 
       {/* Filter Buttons */}
-      <div className="flex justify-center gap-4 mb-12 flex-wrap relative z-10 animate-fadeInUp animation-delay-500">
+      <div className="flex justify-center gap-4 mb-8 flex-wrap relative z-10 animate-fadeInUp animation-delay-500">
         {filters.map((filter) => (
           <button
             key={filter.id}
@@ -395,7 +395,7 @@ const Portfolio = () => {
       </div>
 
       {/* View More Section */}
-      <div className="text-center mt-16 relative z-10 animate-fadeInUp animation-delay-1000">
+      <div className="text-center mt-8 relative z-10 animate-fadeInUp animation-delay-1000">
         <p className="text-[1.8rem] text-gray-300 mb-6 max-md:text-[1.6rem]">
           Interested in working together?
         </p>

@@ -21,7 +21,8 @@ const About = () => {
 
   return (
     <section
-      className="relative min-h-screen pt-[10rem] pr-[1%] pb-8 pl-[2%] flex justify-center items-center gap-48 bg-bg-secondary max-md:flex-col-reverse max-md:pt-[10rem] max-md:px-[3%] max-md:gap-8 overflow-hidden"
+      className="relative min-h-screen pt-[10rem] pb-16 flex justify-center items-center gap-20 bg-bg-secondary max-md:flex-col-reverse max-md:pt-[10rem] max-md:gap-8 overflow-hidden"
+      style={{ paddingLeft: '9%', paddingRight: '9%' }}
       id="about"
     >
       {/* Animated Background */}
@@ -50,23 +51,23 @@ const About = () => {
         />
 
         {/* Floating badges - More technologies */}
-        <div className="absolute top-5 -left-8 bg-accent/10 backdrop-blur-sm border border-accent/30 rounded-2xl px-4 py-2 animate-float max-md:hidden">
-          <span className="text-accent font-bold text-sm">📱 React Native</span>
+        <div className="absolute top-0 left-0 bg-accent/10 backdrop-blur-sm border border-accent/30 rounded-2xl px-4 py-2 animate-float max-md:hidden">
+          <span className="text-accent font-bold text-sm flex items-center gap-2"><i className="fa-brands fa-react text-lg"></i> React Native</span>
         </div>
-        <div className="absolute top-20 -right-8 bg-blue-500/10 backdrop-blur-sm border border-blue-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-300 max-md:hidden">
-          <span className="text-blue-400 font-bold text-sm">⚛️ React.js</span>
+        <div className="absolute top-0 right-0 bg-blue-500/10 backdrop-blur-sm border border-blue-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-300 max-md:hidden">
+          <span className="text-blue-400 font-bold text-sm flex items-center gap-2"><i className="fa-brands fa-react text-lg"></i> React.js</span>
         </div>
-        <div className="absolute bottom-32 left-0 bg-green-500/10 backdrop-blur-sm border border-green-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-500 max-md:hidden">
-          <span className="text-green-400 font-bold text-sm">🟢 Node.js</span>
+        <div className="absolute top-1/2 -left-12 bg-green-500/10 backdrop-blur-sm border border-green-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-500 max-md:hidden">
+          <span className="text-green-400 font-bold text-sm flex items-center gap-2"><i className="fa-brands fa-node-js text-lg"></i> Node.js</span>
         </div>
-        <div className="absolute bottom-14 right-0 bg-purple-500/10 backdrop-blur-sm border border-purple-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-700 max-md:hidden">
-          <span className="text-purple-400 font-bold text-sm">🐘 PHP</span>
+        <div className="absolute top-1/2 -right-12 bg-purple-500/10 backdrop-blur-sm border border-purple-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-700 max-md:hidden">
+          <span className="text-purple-400 font-bold text-sm flex items-center gap-2"><i className="fa-brands fa-php text-lg"></i> PHP</span>
         </div>
-        <div className="absolute top-2/3 -left-12 bg-red-500/10 backdrop-blur-sm border border-red-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-900 max-md:hidden">
-          <span className="text-red-400 font-bold text-sm">🔺 Laravel</span>
+        <div className="absolute bottom-10 left-4 bg-red-500/10 backdrop-blur-sm border border-red-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-900 max-md:hidden">
+          <span className="text-red-400 font-bold text-sm flex items-center gap-2"><i className="fa-brands fa-laravel text-lg"></i> Laravel</span>
         </div>
-        <div className="absolute top-2/3 -right-12 bg-orange-500/10 backdrop-blur-sm border border-orange-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-1100 max-md:hidden">
-          <span className="text-orange-400 font-bold text-sm">☕ Java</span>
+        <div className="absolute bottom-10 right-4 bg-orange-500/10 backdrop-blur-sm border border-orange-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-1100 max-md:hidden">
+          <span className="text-orange-400 font-bold text-sm flex items-center gap-2"><i className="fa-brands fa-java text-lg"></i> Java</span>
         </div>
       </div>
 
