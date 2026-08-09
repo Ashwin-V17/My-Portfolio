@@ -174,28 +174,19 @@ const Home = () => {
           className="text-[1.6rem] max-w-[540px] leading-[1.8] text-gray-400 animate-fadeInUp animation-delay-600 border-l-2 pl-4 mb-8"
           style={{ borderColor: "var(--accent)" }}
         >
-          Full Stack & Mobile Application Developer building production-ready
-          applications with{" "}
-          <span className="text-accent font-semibold">
-            React Native, React.js, Node.js, and Laravel
-          </span>
-          , with hands-on experience in{" "}
-          <span className="text-blue-400 font-semibold">
-            API development, authentication, databases, payments, and
-            Android/iOS deployment
-          </span>
-          .
+          Enthusiastic and motivated Full Stack Developer with a strong
+          foundation in Core Java fundamentals and MERN Stack development.
         </p>
 
         {/* Skill chips */}
         <div className="flex flex-wrap gap-2 mb-10 animate-fadeInUp animation-delay-700">
           {[
+            "React",
             "React Native",
-            "React.js",
             "Node.js",
-            "Laravel",
-            "MySQL",
-            "Firebase",
+            "Java",
+            "MongoDB",
+            "Express",
           ].map((skill) => (
             <span
               key={skill}

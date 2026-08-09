@@ -5,8 +5,8 @@ const About = () => {
 
   const stats = [
     { number: "1+", label: "Years Experience" },
-    { number: "10+", label: "Apps Published" },
-    { number: "8+", label: "Production Projects" },
+    { number: "8+", label: "Apps Published" },
+    { number: "10+", label: "Technologies" },
   ];
 
   const interests = [
@@ -22,7 +22,7 @@ const About = () => {
   return (
     <section
       className="relative min-h-screen pt-[10rem] pb-16 flex justify-center items-center gap-20 bg-bg-secondary max-md:flex-col-reverse max-md:pt-[10rem] max-md:gap-8 overflow-hidden"
-      style={{ paddingLeft: "9%", paddingRight: "9%" }}
+      style={{ paddingLeft: '9%', paddingRight: '9%' }}
       id="about"
     >
       {/* Animated Background */}
@@ -52,34 +52,22 @@ const About = () => {
 
         {/* Floating badges - More technologies */}
         <div className="absolute top-0 left-0 bg-accent/10 backdrop-blur-sm border border-accent/30 rounded-2xl px-4 py-2 animate-float max-md:hidden">
-          <span className="text-accent font-bold text-sm flex items-center gap-2">
-            <i className="fa-brands fa-react text-lg"></i> React Native
-          </span>
+          <span className="text-accent font-bold text-sm flex items-center gap-2"><i className="fa-brands fa-react text-lg"></i> React Native</span>
         </div>
         <div className="absolute top-0 right-0 bg-blue-500/10 backdrop-blur-sm border border-blue-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-300 max-md:hidden">
-          <span className="text-blue-400 font-bold text-sm flex items-center gap-2">
-            <i className="fa-brands fa-react text-lg"></i> React.js
-          </span>
+          <span className="text-blue-400 font-bold text-sm flex items-center gap-2"><i className="fa-brands fa-react text-lg"></i> React.js</span>
         </div>
         <div className="absolute top-1/2 -left-12 bg-green-500/10 backdrop-blur-sm border border-green-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-500 max-md:hidden">
-          <span className="text-green-400 font-bold text-sm flex items-center gap-2">
-            <i className="fa-brands fa-node-js text-lg"></i> Node.js
-          </span>
+          <span className="text-green-400 font-bold text-sm flex items-center gap-2"><i className="fa-brands fa-node-js text-lg"></i> Node.js</span>
         </div>
         <div className="absolute top-1/2 -right-12 bg-purple-500/10 backdrop-blur-sm border border-purple-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-700 max-md:hidden">
-          <span className="text-purple-400 font-bold text-sm flex items-center gap-2">
-            <i className="fa-brands fa-php text-lg"></i> PHP
-          </span>
+          <span className="text-purple-400 font-bold text-sm flex items-center gap-2"><i className="fa-brands fa-php text-lg"></i> PHP</span>
         </div>
         <div className="absolute bottom-10 left-4 bg-red-500/10 backdrop-blur-sm border border-red-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-900 max-md:hidden">
-          <span className="text-red-400 font-bold text-sm flex items-center gap-2">
-            <i className="fa-brands fa-laravel text-lg"></i> Laravel
-          </span>
+          <span className="text-red-400 font-bold text-sm flex items-center gap-2"><i className="fa-brands fa-laravel text-lg"></i> Laravel</span>
         </div>
         <div className="absolute bottom-10 right-4 bg-orange-500/10 backdrop-blur-sm border border-orange-500/30 rounded-2xl px-4 py-2 animate-float animation-delay-1100 max-md:hidden">
-          <span className="text-orange-400 font-bold text-sm flex items-center gap-2">
-            <i className="fa-brands fa-java text-lg"></i> Java
-          </span>
+          <span className="text-orange-400 font-bold text-sm flex items-center gap-2"><i className="fa-brands fa-java text-lg"></i> Java</span>
         </div>
       </div>
 
@@ -122,40 +110,42 @@ const About = () => {
 
         <div className="animate-fadeInUp animation-delay-500 mb-8">
           <p className="text-[1.6rem] leading-relaxed text-gray-300 mb-4 max-md:text-[1.4rem]">
-            Full Stack & Mobile Application Developer with{" "}
-            <span className="text-accent font-semibold">
-              hands-on experience building and deploying production applications
-            </span>{" "}
-            for real-world businesses using{" "}
-            <span className="text-blue-400 font-semibold">
-              React Native, Expo, React.js
-            </span>
-            , <span className="text-green-400 font-semibold">Node.js</span>,{" "}
-            <span className="text-red-400 font-semibold">Laravel</span>, PHP,
-            and MySQL.
-          </p>
+  Full Stack & Mobile Application Developer with{" "}
+  <span className="text-accent font-semibold">
+    hands-on experience building and deploying production applications
+  </span>{" "}
+  for real-world businesses using{" "}
+  <span className="text-blue-400 font-semibold">
+    React Native, Expo, React.js
+  </span>
+  ,{" "}
+  <span className="text-green-400 font-semibold">Node.js</span>,{" "}
+  <span className="text-red-400 font-semibold">Laravel</span>, PHP,
+  and MySQL.
+</p>
 
-          <p className="text-[1.6rem] leading-relaxed text-gray-300 max-md:text-[1.4rem]">
-            I've worked on{" "}
-            <span className="text-accent font-semibold">
-              multi-platform production apps
-            </span>{" "}
-            including healthcare, construction, e-commerce, and service
-            platforms, with experience across{" "}
-            <span className="text-blue-400 font-semibold">
-              API development, authentication, payments, Firebase, analytics,
-              and Android/iOS deployment
-            </span>
-            .
-          </p>
+<p className="text-[1.6rem] leading-relaxed text-gray-300 max-md:text-[1.4rem]">
+  I've worked on{" "}
+  <span className="text-accent font-semibold">
+    multi-platform production apps
+  </span>{" "}
+  including healthcare, construction, e-commerce, and service
+  platforms, with experience across{" "}
+  <span className="text-blue-400 font-semibold">
+    API development, authentication, payments, Firebase,
+    analytics, and Android/iOS deployment
+  </span>
+  .
+</p>
           {isExpanded && (
             <p className="text-[1.6rem] leading-relaxed text-gray-300 mt-4 max-md:text-[1.4rem]">
-              I enjoy taking ownership of applications from development to
-              production deployment, working across both frontend and backend.
-              I've contributed to customer and partner applications such as{" "}
-              <span className="text-accent">FirstPass</span>, Vee Build, and
-              Meduora, while continuously improving my skills in application
-              architecture and full-stack development.
+              Passionate about delivering scalable, high-quality, and
+              user-centric solutions with end-to-end project ownership. I
+              graduated with a Bachelor of Science in Computer Science from{" "}
+              <span className="text-blue-400">
+                Agurchand Manmull Jain College
+              </span>{" "}
+              with 75%.
             </p>
           )}
         </div>

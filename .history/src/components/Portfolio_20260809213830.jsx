@@ -41,41 +41,42 @@ const Portfolio = () => {
       isDualPlatform: true,
     },
     {
-      image: `https://play-lh.googleusercontent.com/pqQzSFCJHOlFa2xs8OqvXh4ASYycaucb7QdPmZUmX9B0j7z4rjB3kvBxr3_UZmPA1H5Sd3Qb8KpFTbghdmK1=w480-h960-rw`,
-      title: "FirstPass Ecosystem",
-      category: "mobile",
-      description:
-        "Multi-platform partner and customer application ecosystem designed for merchant and service-based transactions. Includes customer services, partner management, transaction workflows, and advertising analytics integration.",
-      technologies: [
-        "React Native",
-        "Expo",
-        "Node.js",
-        "MySQL",
-        "REST API",
-        "Firebase",
-        "Meta Ads",
-      ],
-      links: [
-        {
-          type: "customer",
-          playStore:
-            "https://play.google.com/store/apps/details?id=com.app.firstpass",
-          appStore: "https://apps.apple.com/in/app/firstpass/id6782366355",
-          label: "Customer App",
-        },
-        {
-          type: "vendor",
-          playStore:
-            "https://play.google.com/store/apps/details?id=com.app.firstpass_partner",
-          appStore:
-            "https://apps.apple.com/in/app/firstpass-partner/id6781702214",
-          label: "Partner App",
-        },
-      ],
-      featured: true,
-      type: "Service & Partner Platform",
-      isDualPlatform: true,
+  image: `https://play-lh.googleusercontent.com/pqQzSFCJHOlFa2xs8OqvXh4ASYycaucb7QdPmZUmX9B0j7z4rjB3kvBxr3_UZmPA1H5Sd3Qb8KpFTbghdmK1=w480-h960-rw`,
+  title: "FirstPass Ecosystem",
+  category: "mobile",
+  description:
+    "Multi-platform partner and customer application ecosystem designed for merchant and service-based transactions. Includes customer services, partner management, transaction workflows, and advertising analytics integration.",
+  technologies: [
+    "React Native",
+    "Expo",
+    "Node.js",
+    "MySQL",
+    "REST API",
+    "Firebase",
+    "Meta Ads",
+  ],
+  links: [
+    {
+      type: "customer",
+      playStore:
+        "https://play.google.com/store/apps/details?id=com.app.firstpass",
+      appStore:
+        "https://apps.apple.com/in/app/firstpass/id6782366355",
+      label: "Customer App",
     },
+    {
+      type: "vendor",
+      playStore:
+        "https://play.google.com/store/apps/details?id=com.app.firstpass_partner",
+      appStore:
+        "https://apps.apple.com/in/app/firstpass-partner/id6781702214",
+      label: "Partner App",
+    },
+  ],
+  featured: true,
+  type: "Service & Partner Platform",
+  isDualPlatform: true,
+},
     {
       image: "https://meduora.in/assets/images/new/med.png",
       title: "Meduora Healthcare Ecosystem",
@@ -157,18 +158,18 @@ const Portfolio = () => {
       featured: false,
       type: "Education",
     },
-    // {
-    //   image: `${import.meta.env.BASE_URL}assets/images/Screenshot 2024-09-23 141554.png`,
-    //   title: "Student Management System",
-    //   category: "web",
-    //   description:
-    //     "Comprehensive CRUD application for managing student records with authentication, role-based access, and efficient data management using MERN stack.",
-    //   technologies: ["MongoDB", "Express", "React", "Node.js"],
-    //   link: "https://sdms-crud-frontend.onrender.com",
-    //   github: "#",
-    //   featured: true,
-    //   type: "Management System",
-    // },
+    {
+      image: `${import.meta.env.BASE_URL}assets/images/Screenshot 2024-09-23 141554.png`,
+      title: "Student Management System",
+      category: "web",
+      description:
+        "Comprehensive CRUD application for managing student records with authentication, role-based access, and efficient data management using MERN stack.",
+      technologies: ["MongoDB", "Express", "React", "Node.js"],
+      link: "https://sdms-crud-frontend.onrender.com",
+      github: "#",
+      featured: true,
+      type: "Management System",
+    },
   ];
 
   const filters = [

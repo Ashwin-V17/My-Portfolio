@@ -157,18 +157,18 @@ const Portfolio = () => {
       featured: false,
       type: "Education",
     },
-    // {
-    //   image: `${import.meta.env.BASE_URL}assets/images/Screenshot 2024-09-23 141554.png`,
-    //   title: "Student Management System",
-    //   category: "web",
-    //   description:
-    //     "Comprehensive CRUD application for managing student records with authentication, role-based access, and efficient data management using MERN stack.",
-    //   technologies: ["MongoDB", "Express", "React", "Node.js"],
-    //   link: "https://sdms-crud-frontend.onrender.com",
-    //   github: "#",
-    //   featured: true,
-    //   type: "Management System",
-    // },
+    {
+      image: `${import.meta.env.BASE_URL}assets/images/Screenshot 2024-09-23 141554.png`,
+      title: "Student Management System",
+      category: "web",
+      description:
+        "Comprehensive CRUD application for managing student records with authentication, role-based access, and efficient data management using MERN stack.",
+      technologies: ["MongoDB", "Express", "React", "Node.js"],
+      link: "https://sdms-crud-frontend.onrender.com",
+      github: "#",
+      featured: true,
+      type: "Management System",
+    },
   ];
 
   const filters = [

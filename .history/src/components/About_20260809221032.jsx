@@ -5,8 +5,8 @@ const About = () => {
 
   const stats = [
     { number: "1+", label: "Years Experience" },
-    { number: "10+", label: "Apps Published" },
-    { number: "8+", label: "Production Projects" },
+    { number: "8+", label: "Apps Published" },
+    { number: "10+", label: "Technologies" },
   ];
 
   const interests = [
@@ -150,12 +150,13 @@ const About = () => {
           </p>
           {isExpanded && (
             <p className="text-[1.6rem] leading-relaxed text-gray-300 mt-4 max-md:text-[1.4rem]">
-              I enjoy taking ownership of applications from development to
-              production deployment, working across both frontend and backend.
-              I've contributed to customer and partner applications such as{" "}
-              <span className="text-accent">FirstPass</span>, Vee Build, and
-              Meduora, while continuously improving my skills in application
-              architecture and full-stack development.
+              Passionate about delivering scalable, high-quality, and
+              user-centric solutions with end-to-end project ownership. I
+              graduated with a Bachelor of Science in Computer Science from{" "}
+              <span className="text-blue-400">
+                Agurchand Manmull Jain College
+              </span>{" "}
+              with 75%.
             </p>
           )}
         </div>

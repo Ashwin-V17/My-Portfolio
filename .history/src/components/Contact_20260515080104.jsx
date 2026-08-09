@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -14,7 +14,7 @@ const Contact = () => {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
 
@@ -24,28 +24,22 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch("https://formspree.io/f/mldrqpjg", {
-        method: "POST",
+      const response = await fetch('https://formspree.io/f/mldrqpjg', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData)
       });
 
       if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          subject: "",
-          message: "",
-        });
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
       } else {
-        setSubmitStatus("error");
+        setSubmitStatus('error');
       }
     } catch (error) {
-      setSubmitStatus("error");
+      setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
@@ -53,60 +47,37 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: "fa-envelope",
-      title: "Email",
-      value: "ashwinv0017@gmail.com", // Replace with your actual email
-      link: "mailto:ashwinv0017@gmail.com",
-      color: "from-accent to-blue-500",
+      icon: 'fa-envelope',
+      title: 'Email',
+      value: 'ashwinv0017@gmail.com', // Replace with your actual email
+      link: 'mailto:ashwinv0017@gmail.com',
+      color: 'from-accent to-blue-500'
     },
     {
-      icon: "fa-phone",
-      title: "Phone",
-      value: "+91 9003272385", // Replace with your actual phone
-      link: "tel:+919003272385",
-      color: "from-blue-500 to-purple-500",
+      icon: 'fa-phone',
+      title: 'Phone',
+      value: '+91 9003272385', // Replace with your actual phone
+      link: 'tel:+919003272385',
+      color: 'from-blue-500 to-purple-500'
     },
     {
-      icon: "fa-location-dot",
-      title: "Location",
-      value: "Chennai, Tamil Nadu",
-      link: "https://maps.google.com/?q=Chennai",
-      color: "from-purple-500 to-pink-500",
-    },
+      icon: 'fa-location-dot',
+      title: 'Location',
+      value: 'Chennai, Tamil Nadu',
+      link: 'https://maps.google.com/?q=Chennai',
+      color: 'from-purple-500 to-pink-500'
+    }
   ];
 
   const socialLinks = [
-    {
-      icon: "fa-linkedin",
-      url: "https://www.linkedin.com/in/ashwin-vilson-455b75245/",
-      label: "LinkedIn",
-      color: "hover:text-blue-500",
-    },
-    {
-      icon: "fa-github",
-      url: "https://github.com/Ashwin-V17",
-      label: "GitHub",
-      color: "hover:text-gray-400",
-    },
-    {
-      icon: "fa-facebook",
-      url: "https://www.facebook.com/ashwin.V.17",
-      label: "Facebook",
-      color: "hover:text-blue-600",
-    },
-    {
-      icon: "fa-instagram",
-      url: "https://www.instagram.com/ashwin____17/",
-      label: "Instagram",
-      color: "hover:text-pink-500",
-    },
+    { icon: 'fa-linkedin', url: 'https://www.linkedin.com/in/ashwin-vilson-455b75245/', label: 'LinkedIn', color: 'hover:text-blue-500' },
+    { icon: 'fa-github', url: 'https://github.com/Ashwin-V17', label: 'GitHub', color: 'hover:text-gray-400' },
+    { icon: 'fa-facebook', url: 'https://www.facebook.com/ashwin.V.17', label: 'Facebook', color: 'hover:text-blue-600' },
+    { icon: 'fa-instagram', url: 'https://www.instagram.com/ashwin____17/', label: 'Instagram', color: 'hover:text-pink-500' }
   ];
 
   return (
-    <section
-      className="relative min-h-screen pt-[10rem] pr-[9%] pb-8 pl-[9%] max-md:pt-[10rem] max-md:px-[3%] max-md:min-h-auto overflow-hidden"
-      id="contact"
-    >
+    <section className="relative min-h-screen pt-[10rem] pr-[9%] pb-8 pl-[9%] max-md:pt-[10rem] max-md:px-[3%] max-md:min-h-auto overflow-hidden" id="contact">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse"></div>
@@ -121,10 +92,7 @@ const Contact = () => {
           </span>
         </div>
         <h2 className="text-[4.5rem] font-bold mb-4 max-md:text-[3.5rem] animate-fadeInUp animation-delay-200">
-          Contact{" "}
-          <span className="text-accent bg-gradient-to-r from-accent to-blue-500 bg-clip-text text-transparent">
-            Me
-          </span>
+          Contact <span className="text-accent bg-gradient-to-r from-accent to-blue-500 bg-clip-text text-transparent">Me</span>
         </h2>
         <p className="text-[1.6rem] text-gray-400 max-w-[600px] mx-auto animate-fadeInUp animation-delay-300">
           Have a project in mind or want to collaborate? Feel free to reach out!
@@ -140,23 +108,17 @@ const Contact = () => {
               <a
                 key={index}
                 href={info.link}
-                target={info.link.startsWith("http") ? "_blank" : "_self"}
+                target={info.link.startsWith('http') ? '_blank' : '_self'}
                 rel="noopener noreferrer"
                 className="group block bg-bg-secondary border-2 border-bg-primary hover:border-accent rounded-2xl p-6 transition-all duration-500 hover:scale-105 hover:shadow-[0_0_3rem_rgba(14,239,255,0.2)]"
                 style={{ animationDelay: `${0.4 + index * 0.1}s` }}
               >
                 <div className="flex items-center gap-4">
-                  <div
-                    className={`w-16 h-16 rounded-full bg-gradient-to-r ${info.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <i
-                      className={`fa-solid ${info.icon} text-[2rem] text-white`}
-                    ></i>
+                  <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${info.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <i className={`fa-solid ${info.icon} text-[2rem] text-white`}></i>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-[1.4rem] text-gray-400 mb-1">
-                      {info.title}
-                    </h3>
+                    <h3 className="text-[1.4rem] text-gray-400 mb-1">{info.title}</h3>
                     <p className="text-[1.6rem] font-semibold group-hover:text-accent transition-colors duration-300">
                       {info.value}
                     </p>
@@ -183,9 +145,7 @@ const Contact = () => {
                   aria-label={social.label}
                   className={`group w-14 h-14 bg-accent/10 border-2 border-accent/30 rounded-full flex items-center justify-center text-accent hover:bg-accent hover:border-accent transition-all duration-300 hover:scale-110 ${social.color}`}
                 >
-                  <i
-                    className={`fa-brands ${social.icon} text-[2rem] group-hover:text-white transition-colors duration-300`}
-                  ></i>
+                  <i className={`fa-brands ${social.icon} text-[2rem] group-hover:text-white transition-colors duration-300`}></i>
                 </a>
               ))}
             </div>
@@ -199,12 +159,8 @@ const Contact = () => {
                 <div className="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
               </div>
               <div>
-                <p className="text-[1.8rem] font-bold text-accent">
-                  Available for Work
-                </p>
-                <p className="text-[1.4rem] text-gray-400">
-                  Open to new opportunities
-                </p>
+                <p className="text-[1.8rem] font-bold text-accent">Available for Work</p>
+                <p className="text-[1.4rem] text-gray-400">Open to new opportunities</p>
               </div>
             </div>
           </div>
@@ -323,13 +279,13 @@ const Contact = () => {
             </button>
 
             {/* Status Messages */}
-            {submitStatus === "success" && (
+            {submitStatus === 'success' && (
               <div className="mt-6 p-4 bg-green-500/10 border-2 border-green-500/30 rounded-xl text-green-500 text-center animate-fadeIn">
                 <i className="fa-solid fa-check-circle mr-2"></i>
                 Message sent successfully! I'll get back to you soon.
               </div>
             )}
-            {submitStatus === "error" && (
+            {submitStatus === 'error' && (
               <div className="mt-6 p-4 bg-red-500/10 border-2 border-red-500/30 rounded-xl text-red-500 text-center animate-fadeIn">
                 <i className="fa-solid fa-exclamation-circle mr-2"></i>
                 Something went wrong. Please try again.
@@ -347,7 +303,7 @@ const Contact = () => {
         <a
           href={`${import.meta.env.BASE_URL}assets/Ashwin-Resume.pdf`}
           download="Ashwin-Resume"
-          className="group relative inline-block bg-transparent border-2 border-accent rounded-[4rem] px-11 py-4 tracking-wider text-[1.6rem] text-accent font-semibold transition-all duration-500 hover:bg-accent hover:text-bg-secondary hover:shadow-[0_0_2rem_#0ef] hover:scale-105 overflow-hidden max-md:text-[1.4rem] max-md:px-8 max-md:py-3"
+          className="group relative inline-block bg-transparent border-2 border-accent rounded-[4rem] px-11 py-4 tracking-wider text-[1.6rem] text-accent font-semibold transition-all duration-500 hover:bg-accent hover:text-cyan-800 hover:shadow-[0_0_2rem_#0ef] hover:scale-105 overflow-hidden max-md:text-[1.4rem] max-md:px-8 max-md:py-3"
         >
           <span className="relative z-10 flex items-center gap-2 justify-center">
             <i className="fa-solid fa-download"></i>

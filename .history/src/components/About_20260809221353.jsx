@@ -6,7 +6,7 @@ const About = () => {
   const stats = [
     { number: "1+", label: "Years Experience" },
     { number: "10+", label: "Apps Published" },
-    { number: "8+", label: "Production Projects" },
+    { number: "5+", label: "Production Projects" },
   ];
 
   const interests = [
